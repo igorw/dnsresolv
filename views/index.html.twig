@@ -1,0 +1,36 @@
+{% extends "layout.html.twig" %}
+
+{% block body %}
+    <h1>Foobar DNS Resolver</h1>
+
+    <p>
+        <form id="dns-query">
+            <input type="text" name="name" placeholder="www.example.com" />
+            <select name="type">
+            {% for type in app['dnsresolv.record_types'] %}
+                <option>{{ type }}</option>
+            {% endfor %}
+            </select>
+            <input type="submit" value="Go" />
+        </form>
+    </p>
+
+    <div id="dns-table">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Hostname</th>
+                <th>Result</th>
+            </tr>
+            {% for server in app['dnsresolv.servers'] %}
+                <tr data-server="{{ server.hostname }}">
+                    <td>{{ server.name }}</td>
+                    <td>{{ server.location }}</td>
+                    <td>{{ server.hostname }}</td>
+                    <td class="result"></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

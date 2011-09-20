@@ -1,0 +1,10 @@
+---
+- name: Google Public DNS
+  location: "Mountain View, CA USA"
+  hostname: google-public-dns-a.google.com
+- name: Sprint
+  location: "Overland Park, KS USA"
+  hostname: ns2.sprintlink.net
+- name: Speakeasy
+  location: "Seattle, WA USA"
+  hostname: dns.sea1.speakeasy.net

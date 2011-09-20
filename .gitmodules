@@ -1,0 +1,6 @@
+[submodule "vendor/twig"]
+	path = vendor/twig
+	url = https://github.com/fabpot/Twig.git
+[submodule "vendor/symfony/src/Symfony/Component/Yaml"]
+	path = vendor/symfony/src/Symfony/Component/Yaml
+	url = https://github.com/symfony/Yaml.git
