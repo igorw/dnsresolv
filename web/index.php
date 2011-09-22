@@ -8,7 +8,7 @@ $app = new Silex\Application();
 
 $app['autoloader']->registerNamespace('Foobar', __DIR__.'/../src');
 $app['autoloader']->registerNamespace('Symfony', __DIR__.'/../vendor/symfony/src');
-$app->register(new Foobar\DnsResolv\Extension(), array(
+$app->register(new Foobar\DnsResolv\ServiceProvider(), array(
     'dnsresolv.servers.filename' => __DIR__.'/../config/servers.yml',
 ));
 

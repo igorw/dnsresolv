@@ -10,7 +10,7 @@ use Silex\ExtensionInterface;
 
 use Symfony\Component\Yaml\Yaml;
 
-class Extension implements ExtensionInterface
+class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Application $app)
     {
